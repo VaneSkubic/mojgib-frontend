@@ -1,0 +1,7 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-links {
+  display: flex;
+}/*# sourceMappingURL=styles.css.map */
