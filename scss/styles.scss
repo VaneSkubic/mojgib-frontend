@@ -267,3 +267,24 @@ footer {
         }
     }
 }
+
+#title {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    .wrapper {
+        h1 {
+            font-size: $font-size-xxl;
+            font-weight: 600;
+            text-align: center;
+        }
+        gap: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+    }
+}
