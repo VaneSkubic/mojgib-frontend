@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="../scss/reset.css">
     <link rel="stylesheet" href="../scss/styles.css">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <title>MojGib</title>
+    <script type="text/javascript" src="../js/index.js">
+    </script>
 </head>
 
 <body>
 
     <nav>
         <div class="nav-logo">
-            <a href="index.html">
+            <a href="#">
                 <img src="../assets/logo.jpg" alt="logo">
             </a>
         </div>
@@ -272,12 +276,12 @@
                     <p>040 763 009 <span class="">(po 16h)</span></p>
                 </a>
             </div>
-            <div class="right">
-                <input type="text" placeholder="Ime in priimek">
-                <input type="email" placeholder="Email">
-                <textarea cols="30" rows="10" placeholder="Vaše sporočilo"></textarea>
-                <a class="button" href="#">Pošlji</a>
-            </div>
+            <form id="contact-form" class="right">
+                <input id="name" type="text" placeholder="Ime in priimek">
+                <input id="email" type="email" placeholder="Email">
+                <textarea id="message" cols="30" rows="10" placeholder="Vaše sporočilo"></textarea>
+                <input type="submit" class="button" value="Pošlji">
+            </form>
         </section>
     </main>
     <footer>
@@ -331,7 +335,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- <script src="../js/index.js"></script> -->
 </body>
 
 </html>
