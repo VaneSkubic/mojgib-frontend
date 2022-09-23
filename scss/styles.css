@@ -167,6 +167,28 @@ footer .icon svg {
   font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
 }
 
+.blurred {
+  filter: blur(0);
+}
+
+.blurred:after {
+  border-radius: 8px;
+  content: "Trenutno ni na voljo";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
 #mnenja {
   border-top: 10px solid #232323;
   background-color: white;
@@ -228,9 +250,33 @@ footer .icon svg {
   flex-direction: column;
   gap: 0.5rem;
 }
+#ekipa .wrapper .vaditelj .photo {
+  position: relative;
+}
 #ekipa .wrapper .vaditelj .photo img {
   width: 100%;
   border-radius: 8px 8px 0 0;
+}
+#ekipa .wrapper .vaditelj .photo .bio {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+#ekipa .wrapper .vaditelj .photo .bio:hover {
+  opacity: 1;
 }
 #ekipa .wrapper .vaditelj .info {
   padding: 1rem 2rem;
@@ -332,6 +378,7 @@ footer .icon svg {
   justify-content: center;
   align-items: center;
   background-color: white;
+  border-bottom: 5px solid #ffdfdf;
 }
 #title .wrapper {
   gap: 1rem;
@@ -351,6 +398,7 @@ footer .icon svg {
   padding: 7rem 10rem;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 8rem;
   flex-wrap: wrap;
 }
@@ -361,6 +409,8 @@ footer .icon svg {
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
 }
 #ceniki .paket .top {
+  text-transform: uppercase;
+  line-height: 2.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
