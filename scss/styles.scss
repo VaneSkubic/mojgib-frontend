@@ -92,6 +92,10 @@ nav {
 }
 
 footer {
+    a {
+        text-decoration: none;
+        color: white;
+    }
     border-top: 10px solid #D00000;
     color: white;
     background-color: #252525;
@@ -101,11 +105,17 @@ footer {
     .footer-left {
         display: flex;
         align-items: center;
+        .icon:hover {
+            transform: scale(1.2);
+        }
     }
     .footer-right {
         display: flex;
         align-items: center;
         gap: 1rem;
+        a:hover {
+            transform: translateX(-3px);
+        }
         .contact {
             display: flex;
             align-items: center;
@@ -299,6 +309,8 @@ footer {
                 }
                 .bio:hover {
                     opacity: 1;
+                    cursor: help;
+                    user-select: none;
                 }
             }
             .info {

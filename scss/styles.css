@@ -38,10 +38,10 @@ body {
   color: white;
   border: none !important;
   border-radius: 8px;
-  background: hsl(0, 100%, 36%);
-  background: linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
-  background: -moz-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
-  background: -webkit-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  background: hsl(0deg, 100%, 36%);
+  background: linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
+  background: -moz-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
+  background: -webkit-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
   box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
   padding: 10px 25px;
   font-weight: 600;
@@ -92,14 +92,24 @@ footer {
   justify-content: space-between;
   padding: 1.5rem 1rem;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+}
 footer .footer-left {
   display: flex;
   align-items: center;
+}
+footer .footer-left .icon:hover {
+  transform: scale(1.2);
 }
 footer .footer-right {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+footer .footer-right a:hover {
+  transform: translateX(-3px);
 }
 footer .footer-right .contact {
   display: flex;
@@ -294,6 +304,8 @@ footer .icon svg {
 }
 #ekipa .wrapper .vaditelj .photo .bio:hover {
   opacity: 1;
+  cursor: help;
+  user-select: none;
 }
 #ekipa .wrapper .vaditelj .info {
   padding: 1rem 2rem;
@@ -644,17 +656,17 @@ footer .icon svg {
     margin-left: -5px;
   }
   #vadbe,
-  #ceniki,
-  #artikli,
-  #locations {
+#ceniki,
+#artikli,
+#locations {
     padding: 6rem 5rem;
   }
 }
 @media only screen and (max-width: 450px) {
   #vadbe,
-  #ceniki,
-  #artikli,
-  #locations {
+#ceniki,
+#artikli,
+#locations {
     padding: 6rem 2rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */
