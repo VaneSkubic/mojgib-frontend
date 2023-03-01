@@ -36,10 +36,13 @@ body {
 .button {
   text-decoration: none;
   color: white;
+  border: none !important;
   border-radius: 8px;
-  background: hsl(0deg, 100%, 36%);
-  background: linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
-  background: -webkit-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
+  background: hsl(0, 100%, 36%);
+  background: linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  background: -moz-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  background: -webkit-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
   padding: 10px 25px;
   font-weight: 600;
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -60,8 +63,11 @@ body {
 }
 
 nav {
+  transition: all 0.2s;
   z-index: 2;
   position: fixed;
+  top: 0;
+  display: block;
   width: 100%;
   background-color: white;
   padding: 1rem 2rem;
@@ -110,12 +116,15 @@ footer .icon svg {
 }
 
 #hero {
+  gap: 3rem;
+  display: none;
   border-bottom: 1px solid #e4e4ee;
   background-color: white;
   height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 2rem;
 }
 #hero .hero-left {
   width: 40%;
@@ -138,7 +147,7 @@ footer .icon svg {
   justify-content: center;
 }
 #hero .hero-right img {
-  width: 80%;
+  width: 100%;
 }
 
 #vadbe {
@@ -154,12 +163,18 @@ footer .icon svg {
   display: flex;
   gap: 3rem;
 }
-#vadbe .vadba img {
+#vadbe .vadba .image {
+  min-width: 300px;
+  max-width: 300px;
+}
+#vadbe .vadba .image img {
   border-radius: 8px 0 0 8px;
-  width: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #vadbe .vadba .right {
-  padding: 10rem 3rem 2erm 0;
+  padding: 2rem 3rem 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -188,14 +203,13 @@ footer .icon svg {
   height: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 #mnenja {
   border-top: 10px solid #232323;
   background-color: white;
-  padding: 7rem 10rem;
+  padding: 7rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,6 +222,7 @@ footer .icon svg {
 }
 #mnenja .wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 #mnenja .wrapper .mnenje {
@@ -225,7 +240,7 @@ footer .icon svg {
 }
 #mnenja .wrapper .mnenje .icon img {
   height: 30px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 #ekipa {
@@ -261,8 +276,7 @@ footer .icon svg {
   border-radius: 8px 8px 0 0;
 }
 #ekipa .wrapper .vaditelj .photo .bio {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   padding: 1rem 1.5rem;
   text-align: center;
   color: white;
@@ -307,6 +321,7 @@ footer .icon svg {
   color: white;
   display: flex;
   justify-content: center;
+  text-align: center;
   gap: 7rem;
 }
 #metrics .metric {
@@ -382,6 +397,7 @@ footer .icon svg {
   align-items: center;
   background-color: white;
   border-bottom: 5px solid #ffdfdf;
+  padding: 0 2rem;
 }
 #title .wrapper {
   gap: 1rem;
@@ -430,6 +446,7 @@ footer .icon svg {
 }
 #ceniki .paket .bottom .properties {
   margin: 1.5rem 0 1rem 0;
+  padding-right: 1rem;
 }
 #ceniki .paket .bottom .price {
   display: flex;
@@ -449,6 +466,8 @@ footer .icon svg {
   padding: 7rem 10rem;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
+  text-align: center;
   gap: 8rem;
   flex-wrap: wrap;
 }
@@ -489,9 +508,12 @@ footer .icon svg {
 
 #locations {
   padding: 7rem 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 #locations .location {
-  margin: 4rem;
+  max-width: 1200px;
 }
 #locations .location h1 {
   margin-bottom: 2rem;
@@ -506,6 +528,9 @@ footer .icon svg {
 #locations .location .container .map {
   border-right: 6px solid #FFDBDB;
 }
+#locations .location .container .map iframe {
+  display: block;
+}
 #locations .location .container .location-info {
   padding: 2rem 2rem;
   display: flex;
@@ -517,4 +542,119 @@ footer .icon svg {
   color: #B70100;
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1400px) {
+  #locations .location .container {
+    gap: 0;
+    flex-direction: column;
+  }
+  #locations .location .container .map {
+    border-right: none;
+    border-bottom: 6px solid #FFDBDB;
+  }
+  #locations .location .container .map iframe {
+    width: 100%;
+  }
+  #locations .location .container .location-info {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #mnenja .wrapper {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  #mnenja .wrapper .mnenje .icon img {
+    margin-bottom: 0.5rem;
+  }
+  #ekipa .wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  #vadbe .vadba {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #vadbe .vadba .image {
+    min-width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+  #vadbe .vadba .image img {
+    border-radius: 8px 8px 0 0;
+  }
+  #vadbe .vadba .right {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #nav .nav-links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #contact {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 7rem 2rem;
+  }
+  #contact .left h1 {
+    width: fit-content;
+  }
+  #contact #contact-form *:not(.button) {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #hero {
+    margin-top: 50px;
+    height: 55vh;
+    justify-content: flex-start;
+    display: relative;
+  }
+  #hero .hero-right {
+    display: none;
+  }
+  #hero .hero-left {
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 630px) {
+  #metrics {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  #metrics .metric {
+    gap: 0.5rem;
+  }
+  #metrics .metric .icon svg {
+    height: 30px;
+  }
+  footer {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  footer .footer-right .contact .icon {
+    margin-left: -5px;
+  }
+  #vadbe,
+  #ceniki,
+  #artikli,
+  #locations {
+    padding: 6rem 5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #vadbe,
+  #ceniki,
+  #artikli,
+  #locations {
+    padding: 6rem 2rem !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
