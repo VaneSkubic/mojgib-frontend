@@ -42,7 +42,6 @@ body {
   background: linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
   background: -moz-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
   background: -webkit-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
-  box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
   padding: 10px 25px;
   font-weight: 600;
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -52,6 +51,7 @@ body {
   cursor: pointer;
   transform: translateY(-2px);
   text-decoration: none;
+  box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
 }
 
 .double {
@@ -101,7 +101,7 @@ footer .footer-left {
   align-items: center;
 }
 footer .footer-left .icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 footer .footer-right {
   display: flex;
@@ -144,7 +144,7 @@ footer .icon svg {
   gap: 1rem;
 }
 #hero .hero-left h1 {
-  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -304,7 +304,7 @@ footer .icon svg {
 }
 #ekipa .wrapper .vaditelj .photo .bio:hover {
   opacity: 1;
-  cursor: help;
+  cursor: pointer;
   user-select: none;
 }
 #ekipa .wrapper .vaditelj .info {
@@ -396,6 +396,10 @@ footer .icon svg {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+#contact .right textarea {
+  resize: none;
+  scroll-padding-bottom: 1rem;
 }
 #contact .right *:not(.button) {
   width: 100%;
@@ -573,6 +577,9 @@ footer .icon svg {
   #locations .location .container .location-info {
     gap: 1rem;
   }
+  #contact {
+    padding: 7rem 10rem;
+  }
 }
 @media only screen and (max-width: 1000px) {
   #mnenja .wrapper {
@@ -585,6 +592,9 @@ footer .icon svg {
   #ekipa .wrapper {
     flex-direction: column;
     gap: 2rem;
+  }
+  #contact {
+    padding: 7rem 4rem;
   }
 }
 @media only screen and (max-width: 950px) {
