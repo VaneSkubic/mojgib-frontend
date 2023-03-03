@@ -34,10 +34,11 @@ html {
 
 body {
     min-height: 100vh;
-    background: #ffffff;
+    background-color: #ffffff;
     background-image: url(../assets/backdrop.png);
     background-repeat: repeat;
     background-size: cover;
+    background-position-y: 200px;
 }
 
 .button {
@@ -85,9 +86,51 @@ nav {
         display: flex;
         align-items: center;
         gap: 3rem;
+        #hamburger-icon {
+            height: fit-content;
+            display: none;
+        }
     }
-    img {
-        width: 180px;
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: clamp(100px, 15vw, 180px);
+        }
+    }
+    #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 1;
+        align-items: center;
+        flex-direction: column;
+        .upper {
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e4e4ee;
+            img {
+                width: clamp(100px, 15vw, 180px);
+            }
+        }
+        .mobile-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            a {
+                font-size: $font-size-lg;
+                font-weight: 600;
+            }
+        }
     }
 }
 
@@ -137,11 +180,12 @@ footer {
     display: none;
     border-bottom: 1px solid #e4e4ee;
     background-color: white;
-    height: 85vh;
+    height: fit-content;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     .hero-left {
         width: 40%;
         h1 {
@@ -232,6 +276,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 6rem;
+    text-align: center;
     h1 {
         font-size: $font-size-xl;
         font-weight: 600;
@@ -268,6 +313,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 4rem;
     h1 {
         font-size: $font-size-xl;
@@ -425,6 +471,7 @@ footer {
     background-color: white;
     border-bottom: 5px solid #ffdfdf;
     padding: 0 2rem;
+    text-align: center;
     .wrapper {
         h1 {
             font-size: $font-size-xxl;
@@ -646,7 +693,18 @@ footer {
 @media only screen and (max-width: 900px) {
     #nav {
         .nav-links {
-            display: none;
+            gap: 2rem;
+            .nav-link,
+            .button {
+                display: none;
+            }
+            #hamburger-icon {
+                display: block;
+            }
+        }
+        #mobile-menu {
+            display: flex;
+            transform: translateX(-100%);
         }
     }
 }
@@ -715,7 +773,8 @@ footer {
     #vadbe,
     #ceniki,
     #artikli,
-    #locations {
+    #locations,
+    #mnenja {
         padding: 6rem 2rem !important;
     }
 }

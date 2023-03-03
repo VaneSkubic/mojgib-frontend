@@ -27,10 +27,11 @@ html {
 
 body {
   min-height: 100vh;
-  background: #ffffff;
+  background-color: #ffffff;
   background-image: url(../assets/backdrop.png);
   background-repeat: repeat;
   background-size: cover;
+  background-position-y: 200px;
 }
 
 .button {
@@ -38,10 +39,10 @@ body {
   color: white;
   border: none !important;
   border-radius: 8px;
-  background: hsl(0deg, 100%, 36%);
-  background: linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
-  background: -moz-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
-  background: -webkit-linear-gradient(135deg, hsl(0deg, 100%, 36%) 0%, hsl(0deg, 100%, 45%) 100%);
+  background: hsl(0, 100%, 36%);
+  background: linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  background: -moz-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+  background: -webkit-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
   padding: 10px 25px;
   font-weight: 600;
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -80,8 +81,50 @@ nav .nav-links {
   align-items: center;
   gap: 3rem;
 }
-nav img {
-  width: 180px;
+nav .nav-links #hamburger-icon {
+  height: fit-content;
+  display: none;
+}
+nav .nav-logo {
+  display: flex;
+  align-items: center;
+}
+nav .nav-logo img {
+  width: clamp(100px, 15vw, 180px);
+}
+nav #mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+}
+nav #mobile-menu .upper {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e4ee;
+}
+nav #mobile-menu .upper img {
+  width: clamp(100px, 15vw, 180px);
+}
+nav #mobile-menu .mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+nav #mobile-menu .mobile-links a {
+  font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  font-weight: 600;
 }
 
 footer {
@@ -130,11 +173,12 @@ footer .icon svg {
   display: none;
   border-bottom: 1px solid #e4e4ee;
   background-color: white;
-  height: 85vh;
+  height: fit-content;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
 }
 #hero .hero-left {
   width: 40%;
@@ -225,6 +269,7 @@ footer .icon svg {
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  text-align: center;
 }
 #mnenja h1 {
   font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
@@ -259,6 +304,7 @@ footer .icon svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 4rem;
 }
 #ekipa h1 {
@@ -416,6 +462,7 @@ footer .icon svg {
   background-color: white;
   border-bottom: 5px solid #ffdfdf;
   padding: 0 2rem;
+  text-align: center;
 }
 #title .wrapper {
   gap: 1rem;
@@ -616,7 +663,18 @@ footer .icon svg {
 }
 @media only screen and (max-width: 900px) {
   #nav .nav-links {
+    gap: 2rem;
+  }
+  #nav .nav-links .nav-link,
+  #nav .nav-links .button {
     display: none;
+  }
+  #nav .nav-links #hamburger-icon {
+    display: block;
+  }
+  #nav #mobile-menu {
+    display: flex;
+    transform: translateX(-100%);
   }
 }
 @media only screen and (max-width: 850px) {
@@ -668,17 +726,18 @@ footer .icon svg {
     margin-left: -5px;
   }
   #vadbe,
-#ceniki,
-#artikli,
-#locations {
+  #ceniki,
+  #artikli,
+  #locations {
     padding: 6rem 5rem;
   }
 }
 @media only screen and (max-width: 450px) {
   #vadbe,
-#ceniki,
-#artikli,
-#locations {
+  #ceniki,
+  #artikli,
+  #locations,
+  #mnenja {
     padding: 6rem 2rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */

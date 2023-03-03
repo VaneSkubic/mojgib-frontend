@@ -28,3 +28,15 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
+
+var hamburgerIcon = document.getElementById("hamburger-icon");
+var closeIcon = document.getElementById("close-icon");
+var mobileMenu = document.getElementById("mobile-menu");
+hamburgerIcon.onclick = function() {
+    mobileMenu.style.transform = "translateX(0)";
+    document.body.style.overflow = "hidden";
+}
+closeIcon.onclick = function() {
+    mobileMenu.style.transform = "translateX(-100%)";
+    document.body.style.overflow = "visible";
+}
