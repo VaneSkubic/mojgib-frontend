@@ -19,12 +19,13 @@ window.onload = function() {
 }
 
 var prevScrollpos = window.pageYOffset;
+var nav = document.getElementById("nav");
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("nav").style.top = "0";
+    if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+        nav.style.top = "0";
     } else {
-        document.getElementById("nav").style.top = "-100px";
+        nav.style.top = "-100px";
     }
     prevScrollpos = currentScrollPos;
 }
@@ -32,11 +33,27 @@ window.onscroll = function() {
 var hamburgerIcon = document.getElementById("hamburger-icon");
 var closeIcon = document.getElementById("close-icon");
 var mobileMenu = document.getElementById("mobile-menu");
+
+function hideMobileMenu() {
+    mobileMenu.style.transform = "translateX(-100%)";
+    document.body.style.overflow = "visible";
+}
+
 hamburgerIcon.onclick = function() {
     mobileMenu.style.transform = "translateX(0)";
     document.body.style.overflow = "hidden";
 }
 closeIcon.onclick = function() {
-    mobileMenu.style.transform = "translateX(-100%)";
-    document.body.style.overflow = "visible";
+    hideMobileMenu()
+}
+
+var mobileMenuLinks = document.getElementsByClassName("mobile nav-link");
+var mobileMenuAction = document.getElementsByClassName("mobile button")[0];
+mobileMenuAction.onclick = function() {
+    hideMobileMenu()
+}
+for (var i = 0; i < mobileMenuLinks.length; i++) {
+    mobileMenuLinks[i].onclick = function() {
+        hideMobileMenu()
+    }
 }

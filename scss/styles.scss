@@ -181,11 +181,11 @@ footer {
     border-bottom: 1px solid #e4e4ee;
     background-color: white;
     height: fit-content;
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem;
+    padding-top: calc(80px + 2rem);
     .hero-left {
         width: 40%;
         h1 {
@@ -464,13 +464,14 @@ footer {
 }
 
 #title {
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     border-bottom: 5px solid #ffdfdf;
     padding: 0 2rem;
+    padding-top: 60px;
     text-align: center;
     .wrapper {
         h1 {
@@ -707,6 +708,9 @@ footer {
             transform: translateX(-100%);
         }
     }
+    #title {
+        height: 50vh;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -725,7 +729,7 @@ footer {
 
 @media only screen and (max-width: 750px) {
     #hero {
-        margin-top: 50px;
+        padding-top: calc(55px + 2rem);
         height: 55vh;
         justify-content: flex-start;
         display: relative;
