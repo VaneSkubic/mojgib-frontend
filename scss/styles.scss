@@ -729,7 +729,7 @@ footer {
 
 @media only screen and (max-width: 750px) {
     #hero {
-        margin-top: 50px;
+        padding-top: calc(55px + 2rem);
         height: 55vh;
         justify-content: flex-start;
         display: relative;
