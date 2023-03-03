@@ -181,11 +181,11 @@ footer {
     border-bottom: 1px solid #e4e4ee;
     background-color: white;
     height: fit-content;
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem;
+    padding-top: calc(80px + 2rem);
     .hero-left {
         width: 40%;
         h1 {
