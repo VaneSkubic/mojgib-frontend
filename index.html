@@ -1,62 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+emailjs.init('03OqSVaC9xrZ19mh3');
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var contactParams = {
+            name: document.getElementById('name').value,
+            email: document.getElementById("email").value,
+            message: document.getElementById('message').value,
+        }
+        emailjs.send('service_cm9h7ra', 'template_vt3zs5i', contactParams).then(
+            function() {
+                console.log('success')
+            },
+            function(error) {
+                console.log('Error: ' + error)
+            }
+        )
+    });
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="scss/reset.css">
-    <link rel="stylesheet" href="scss/styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <title>MojGib</title>
-    </script>
-</head>
+var prevScrollpos = window.pageYOffset;
+var nav = document.getElementById("nav");
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+        nav.style.top = "0";
+    } else {
+        nav.style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
 
-<body>
+var hamburgerIcon = document.getElementById("hamburger-icon");
+var closeIcon = document.getElementById("close-icon");
+var mobileMenu = document.getElementById("mobile-menu");
 
-    <nav id="nav">
-        <div class="nav-logo">
-            <a href="#">
-                <img src="assets/logo.jpg" alt="logo">
-            </a>
-        </div>
-        <div class="nav-links">
-            <a class="nav-link" href="html/urniki.html">Urniki</a>
-            <a class="nav-link" href="html/ceniki.html">Ceniki</a>
-            <a class="nav-link" href="html/artikli.html">Artikli</a>
-            <a class="nav-link" href="html/lokacije.html">Lokacije</a>
-            <a class="button" href="#contact">Pridruži se</a>
-            <div id="hamburger-icon">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_17_18053)">
-                    <path d="M4 18H20C20.55 18 21 17.55 21 17C21 16.45 20.55 16 20 16H4C3.45 16 3 16.45 3 17C3 17.55 3.45 18 4 18ZM4 13H20C20.55 13 21 12.55 21 12C21 11.45 20.55 11 20 11H4C3.45 11 3 11.45 3 12C3 12.55 3.45 13 4 13ZM3 7C3 7.55 3.45 8 4 8H20C20.55 8 21 7.55 21 7C21 6.45 20.55 6 20 6H4C3.45 6 3 6.45 3 7Z" fill="#323232"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_17_18053">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-            </div>
-        </div>
-        <div id="mobile-menu">
-            <div class="upper">
-                <div class="nav-logo">
-                    <a href="#">
-                        <img src="assets/logo.jpg" alt="logo">
-                    </a>
-                </div>
-                <div id="close-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_17_18087)">
-                        <path d="M18.3002 5.70997C17.9102 5.31997 17.2802 5.31997 16.8902 5.70997L12.0002 10.59L7.11022 5.69997C6.72022 5.30997 6.09021 5.30997 5.70021 5.69997C5.31021 6.08997 5.31021 6.71997 5.70021 7.10997L10.5902 12L5.70021 16.89C5.31021 17.28 5.31021 17.91 5.70021 18.3C6.09021 18.69 6.72022 18.69 7.11022 18.3L12.0002 13.41L16.8902 18.3C17.2802 18.69 17.9102 18.69 18.3002 18.3C18.6902 17.91 18.6902 17.28 18.3002 16.89L13.4102 12L18.3002 7.10997C18.6802 6.72997 18.6802 6.08997 18.3002 5.70997Z" fill="#323232"/>
-                        </g>
-                        <defs>
+function hideMobileMenu() {
+    mobileMenu.style.transform = "translateX(-100%)";
+    document.body.style.overflow = "visible";
+}
+
+hamburgerIcon.onclick = function() {
+    mobileMenu.style.transform = "translateX(0)";
+    document.body.style.overflow = "hidden";
+}
+closeIcon.onclick = function() {
+    hideMobileMenu()
+}
+
+var mobileMenuLinks = document.getElementsByClassName("mobile nav-link");
+var mobileMenuAction = document.getElementsByClassName("mobile button")[0];
+mobileMenuAction.onclick = function() {
+    hideMobileMenu()
+}
+for (var i = 0; i < mobileMenuLinks.length; i++) {
+    mobileMenuLinks[i].onclick = function() {
+        hideMobileMenu()
+    }
+}                       <defs>
                         <clipPath id="clip0_17_18087">
                         <rect width="24" height="24" fill="white"/>
                         </clipPath>
@@ -66,11 +66,11 @@
                 </div>
             </div>
             <div class="mobile-links">
-                <a class="nav-link" href="html/urniki.html">Urniki</a>
-                <a class="nav-link" href="html/ceniki.html">Ceniki</a>
-                <a class="nav-link" href="html/artikli.html">Artikli</a>
-                <a class="nav-link" href="html/lokacije.html">Lokacije</a>
-                <a class="button" href="#contact">Pridruži se</a>
+                <a class="mobile nav-link" href="html/urniki.html">Urniki</a>
+                <a class="mobile nav-link" href="html/ceniki.html">Ceniki</a>
+                <a class="mobile nav-link" href="html/artikli.html">Artikli</a>
+                <a class="mobile nav-link" href="html/lokacije.html">Lokacije</a>
+                <a class="mobile button" href="#contact">Pridruži se</a>
             </div>
         </div>
     </nav>
