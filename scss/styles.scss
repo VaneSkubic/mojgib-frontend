@@ -464,13 +464,14 @@ footer {
 }
 
 #title {
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     border-bottom: 5px solid #ffdfdf;
     padding: 0 2rem;
+    padding-top: 60px;
     text-align: center;
     .wrapper {
         h1 {
@@ -706,6 +707,9 @@ footer {
             display: flex;
             transform: translateX(-100%);
         }
+    }
+    #title {
+        height: 50vh;
     }
 }
 
