@@ -479,7 +479,7 @@ footer .icon svg {
   text-align: center;
 }
 
-#ceniki {
+#cenik {
   padding: 7rem 10rem;
   display: flex;
   align-items: flex-start;
@@ -487,13 +487,13 @@ footer .icon svg {
   gap: 8rem;
   flex-wrap: wrap;
 }
-#ceniki .paket {
+#cenik .paket {
   width: 300px;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
 }
-#ceniki .paket .top {
+#cenik .paket .top {
   text-transform: uppercase;
   line-height: 2.8rem;
   display: flex;
@@ -504,17 +504,17 @@ footer .icon svg {
   border-bottom: 7px solid #FF6868;
   border-radius: 8px 8px 0 0;
 }
-#ceniki .paket .top h2 {
+#cenik .paket .top h2 {
   font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
   font-weight: 600;
   margin: 1rem 2rem;
   color: white;
 }
-#ceniki .paket .bottom .properties {
+#cenik .paket .bottom .properties {
   margin: 1.5rem 0 1rem 0;
   padding-right: 1rem;
 }
-#ceniki .paket .bottom .price {
+#cenik .paket .bottom .price {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,7 +523,7 @@ footer .icon svg {
   font-weight: 600;
   margin: 1rem 0;
 }
-#ceniki .paket:hover {
+#cenik .paket:hover {
   cursor: pointer;
   transform: scale(1.03);
 }
@@ -644,7 +644,7 @@ footer .icon svg {
   #contact {
     padding: 7rem 4rem;
   }
-  #ceniki,
+  #cenik,
   #artikli {
     gap: 4rem;
   }
@@ -734,7 +734,7 @@ footer .icon svg {
     margin-left: -5px;
   }
   #vadbe,
-  #ceniki,
+  #cenik,
   #artikli,
   #locations {
     padding: 6rem 5rem;
@@ -742,7 +742,7 @@ footer .icon svg {
 }
 @media only screen and (max-width: 450px) {
   #vadbe,
-  #ceniki,
+  #cenik,
   #artikli,
   #locations,
   #mnenja {
