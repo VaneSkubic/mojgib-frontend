@@ -488,7 +488,7 @@ footer {
     }
 }
 
-#ceniki {
+#cenik {
     padding: 7rem 10rem;
     display: flex;
     align-items: flex-start;
@@ -669,6 +669,10 @@ footer {
     #contact {
         padding: 7rem 4rem;
     }
+    #cenik,
+    #artikli {
+        gap: 4rem;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -766,7 +770,7 @@ footer {
         }
     }
     #vadbe,
-    #ceniki,
+    #cenik,
     #artikli,
     #locations {
         padding: 6rem 5rem;
@@ -775,7 +779,7 @@ footer {
 
 @media only screen and (max-width: 450px) {
     #vadbe,
-    #ceniki,
+    #cenik,
     #artikli,
     #locations,
     #mnenja {
