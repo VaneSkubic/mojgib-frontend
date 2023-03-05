@@ -28,10 +28,6 @@ $font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
     transition: all .2s ease-out;
 }
 
-// html,
-// body {
-//     overscroll-behavior-y: none;
-// }
 html {
     scroll-behavior: smooth;
 }
@@ -43,10 +39,6 @@ body {
     background-repeat: repeat;
     background-size: cover;
     background-position-y: 200px;
-}
-
-body {
-    overscroll-behavior-y: none;
 }
 
 .button {
@@ -600,7 +592,6 @@ footer {
     // align-items: center;
     gap: 5rem;
     .location {
-        max-width: 1200px;
         h1 {
             margin-bottom: 2rem;
             font-size: $font-size-xl;

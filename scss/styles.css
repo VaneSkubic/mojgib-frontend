@@ -34,10 +34,6 @@ body {
   background-position-y: 200px;
 }
 
-body {
-  overscroll-behavior-y: none;
-}
-
 .button {
   text-decoration: none;
   color: white;
@@ -581,9 +577,6 @@ footer .icon svg {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-}
-#locations .location {
-  max-width: 1200px;
 }
 #locations .location h1 {
   margin-bottom: 2rem;
