@@ -28,7 +28,7 @@ html {
 body {
   min-height: 100vh;
   background-color: #ffffff;
-  background-image: url(../assets/backdrop.png);
+  background-image: url(../assets/backdrop.webp);
   background-repeat: repeat;
   background-size: cover;
   background-position-y: 200px;
@@ -572,14 +572,72 @@ footer .icon svg {
   margin: 0;
 }
 
-#locations {
+#urniki {
   padding: 7rem 10rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
 }
-#locations .location {
-  max-width: 1200px;
+#urniki .urnik h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  font-weight: 600;
+}
+#urniki .urnik .table {
+  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+#urniki .urnik .table .day {
+  display: flex;
+  flex-direction: column;
+}
+#urniki .urnik .table .day .header {
+  display: flex;
+  align-items: center;
+  background-color: #FFECEC;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  padding: 1rem 1.5rem;
+}
+#urniki .urnik .table .day .header svg {
+  margin: 1rem;
+}
+#urniki .urnik .table .day .times {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+#urniki .urnik .table .day .times .time {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+#urniki .urnik .table .day .times .time svg {
+  margin: 1rem;
+}
+#urniki .urnik .table .day .times .time .hour,
+#urniki .urnik .table .day .times .time .location {
+  display: flex;
+  align-items: center;
+}
+#urniki .urnik .table .day .times .time .hour svg,
+#urniki .urnik .table .day .times .time .location svg {
+  margin: 1rem;
+}
+#urniki .urnik .table .day .times .time .hour {
+  padding-right: 3.5rem;
+  border-right: 1px solid #CBCBCB;
+}
+#urniki .urnik .table .day .times .time .location {
+  margin-left: 2rem;
+}
+
+#locations {
+  padding: 7rem 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 #locations .location h1 {
   margin-bottom: 2rem;
@@ -736,8 +794,9 @@ footer .icon svg {
   #vadbe,
   #cenik,
   #artikli,
-  #locations {
-    padding: 6rem 5rem;
+  #locations,
+  #urniki {
+    padding: 6rem 5rem !important;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -745,7 +804,8 @@ footer .icon svg {
   #cenik,
   #artikli,
   #locations,
-  #mnenja {
+  #mnenja,
+  #urniki {
     padding: 6rem 2rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */

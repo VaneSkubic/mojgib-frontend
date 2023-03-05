@@ -28,11 +28,6 @@ $font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
     transition: all .2s ease-out;
 }
 
-html,
-body {
-    overscroll-behavior-y: none;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -40,7 +35,7 @@ html {
 body {
     min-height: 100vh;
     background-color: #ffffff;
-    background-image: url(../assets/backdrop.png);
+    background-image: url(../assets/backdrop.webp);
     background-repeat: repeat;
     background-size: cover;
     background-position-y: 200px;
@@ -590,14 +585,74 @@ footer {
     }
 }
 
+#urniki {
+    padding: 7rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .urnik {
+        h1 {
+            margin-bottom: 2rem;
+            font-size: $font-size-xl;
+            font-weight: 600;
+        }
+        .table {
+            box-shadow: 0px 4px 74px rgb(0 0 0 / 5%);
+            display: flex;
+            flex-direction: column;
+            .day {
+                display: flex;
+                flex-direction: column;
+                .header {
+                    display: flex;
+                    align-items: center;
+                    background-color: #FFECEC;
+                    font-weight: 400;
+                    font-size: $font-size-md;
+                    padding: 1rem 1.5rem;
+                    svg {
+                        margin: 1rem;
+                    }
+                }
+                .times {
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    .time {
+                        display: flex;
+                        align-items: center;
+                        padding: 1rem 1.5rem;
+                        svg {
+                            margin: 1rem;
+                        }
+                        .hour,
+                        .location {
+                            display: flex;
+                            align-items: center;
+                            svg {
+                                margin: 1rem;
+                            }
+                        }
+                        .hour {
+                            padding-right: 3.5rem;
+                            border-right: 1px solid #CBCBCB;
+                        }
+                        .location {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #locations {
     padding: 7rem 10rem;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     gap: 5rem;
     .location {
-        max-width: 1200px;
         h1 {
             margin-bottom: 2rem;
             font-size: $font-size-xl;
@@ -777,8 +832,9 @@ footer {
     #vadbe,
     #cenik,
     #artikli,
-    #locations {
-        padding: 6rem 5rem;
+    #locations,
+    #urniki {
+        padding: 6rem 5rem !important;
     }
 }
 
@@ -787,7 +843,8 @@ footer {
     #cenik,
     #artikli,
     #locations,
-    #mnenja {
+    #mnenja,
+    #urniki {
         padding: 6rem 2rem !important;
     }
 }
