@@ -34,6 +34,10 @@ body {
   background-position-y: 200px;
 }
 
+body {
+  overscroll-behavior-y: none;
+}
+
 .button {
   text-decoration: none;
   color: white;
