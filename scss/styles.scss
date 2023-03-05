@@ -587,6 +587,9 @@ footer {
 
 #urniki {
     padding: 7rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
     .urnik {
         h1 {
             margin-bottom: 2rem;
@@ -594,7 +597,7 @@ footer {
             font-weight: 600;
         }
         .table {
-            box-shadow: 0px 4px 74px rgb(0 0 0 / 10%);
+            box-shadow: 0px 4px 74px rgb(0 0 0 / 5%);
             display: flex;
             flex-direction: column;
             .day {
