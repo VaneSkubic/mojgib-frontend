@@ -14,7 +14,8 @@ window.onload = function() {
                 button.style.background = 'linear-gradient(96.44deg, #0FB700 0%, #05E800 100%)'
             },
             function(error) {
-                console.log('Error: ' + error)
+                var button = document.getElementsByClassName('button submit')[0];
+                button.value = "Napaka 😭";
             }
         )
     });
