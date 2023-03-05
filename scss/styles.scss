@@ -621,7 +621,6 @@ footer {
                     .time {
                         display: flex;
                         align-items: center;
-                        // gap: 1rem;
                         padding: 1rem 1.5rem;
                         svg {
                             margin: 1rem;
@@ -833,8 +832,9 @@ footer {
     #vadbe,
     #cenik,
     #artikli,
-    #locations {
-        padding: 6rem 5rem;
+    #locations,
+    #urniki {
+        padding: 6rem 5rem !important;
     }
 }
 
@@ -843,7 +843,8 @@ footer {
     #cenik,
     #artikli,
     #locations,
-    #mnenja {
+    #mnenja,
+    #urniki {
         padding: 6rem 2rem !important;
     }
 }

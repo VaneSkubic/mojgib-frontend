@@ -794,8 +794,9 @@ footer .icon svg {
   #vadbe,
   #cenik,
   #artikli,
-  #locations {
-    padding: 6rem 5rem;
+  #locations,
+  #urniki {
+    padding: 6rem 5rem !important;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -803,7 +804,8 @@ footer .icon svg {
   #cenik,
   #artikli,
   #locations,
-  #mnenja {
+  #mnenja,
+  #urniki {
     padding: 6rem 2rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */
