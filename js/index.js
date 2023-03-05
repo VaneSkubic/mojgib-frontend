@@ -9,7 +9,9 @@ window.onload = function() {
         }
         emailjs.send('service_cm9h7ra', 'template_vt3zs5i', contactParams).then(
             function() {
-                console.log('success')
+                var button = document.getElementsByClassName('button submit')[0];
+                button.value = "Poslano 👍";
+                button.style.background = 'linear-gradient(96.44deg, #0FB700 0%, #05E800 100%)'
             },
             function(error) {
                 console.log('Error: ' + error)
