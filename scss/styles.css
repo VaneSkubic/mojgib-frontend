@@ -29,6 +29,7 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
   background-image: url(../assets/backdrop.webp);
+  background-attachment: fixed;
   background-repeat: repeat;
   background-size: cover;
   background-position-y: 200px;
@@ -584,7 +585,9 @@ footer .icon svg {
   font-weight: 600;
 }
 #urniki .urnik .table {
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(26, 33, 52, 0.11);
   display: flex;
   flex-direction: column;
 }
@@ -595,13 +598,15 @@ footer .icon svg {
 #urniki .urnik .table .day .header {
   display: flex;
   align-items: center;
-  background-color: #FFECEC;
+  background-color: #B70100;
+  color: white;
   font-weight: 400;
   font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
   padding: 1rem 1.5rem;
 }
 #urniki .urnik .table .day .header svg {
   margin: 1rem;
+  display: none;
 }
 #urniki .urnik .table .day .times {
   background-color: white;
@@ -761,7 +766,6 @@ footer .icon svg {
     padding-top: calc(55px + 2rem);
     height: 55vh;
     justify-content: flex-start;
-    display: relative;
   }
   #hero .hero-right {
     display: none;
