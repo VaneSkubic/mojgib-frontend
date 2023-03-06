@@ -766,7 +766,6 @@ footer .icon svg {
     padding-top: calc(55px + 2rem);
     height: 55vh;
     justify-content: flex-start;
-    display: relative;
   }
   #hero .hero-right {
     display: none;
