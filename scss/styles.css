@@ -613,6 +613,8 @@ footer .icon svg {
   padding: 1rem 1.5rem;
 }
 #urniki .urnik .table .day .header svg {
+  height: 30px;
+  width: 30px;
   margin: 1rem;
 }
 #urniki .urnik .table .day .header svg path {
@@ -629,6 +631,7 @@ footer .icon svg {
   padding: 1.5rem 0;
 }
 #urniki .urnik .table .day .times .time svg {
+  height: 30px;
   margin-right: 1rem;
 }
 #urniki .urnik .table .day .times .time .location a {
@@ -639,12 +642,14 @@ footer .icon svg {
   transform: translateY(-2px);
 }
 #urniki .urnik .table .day .times .time .hour {
+  text-align: center;
   display: flex;
   align-items: center;
   padding: 0.5rem 2rem;
   border-right: 1px solid #CBCBCB;
 }
 #urniki .urnik .table .day .times .time .location {
+  text-align: center;
   padding: 0.5rem 2rem;
 }
 
@@ -811,6 +816,15 @@ footer .icon svg {
   #locations,
   #urniki {
     padding: 6rem 5rem !important;
+  }
+  #urniki .hour,
+  #urniki .location {
+    justify-content: center;
+    padding: 0.5rem 1rem !important;
+  }
+  #urniki .hour svg,
+  #urniki .location svg {
+    margin-right: 0.5rem !important;
   }
 }
 @media only screen and (max-width: 450px) {

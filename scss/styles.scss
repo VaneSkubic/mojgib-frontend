@@ -623,6 +623,8 @@ footer {
                     font-size: $font-size-md;
                     padding: 1rem 1.5rem;
                     svg {
+                        height: 30px;
+                        width: 30px;
                         path {
                             fill: white;
                         }
@@ -638,6 +640,7 @@ footer {
                         align-items: center;
                         padding: 1.5rem 0;
                         svg {
+                            height: 30px;
                             margin-right: 1rem;
                         }
                         .location {
@@ -650,12 +653,14 @@ footer {
                             transform: translateY(-2px);
                         }
                         .hour {
+                            text-align: center;
                             display: flex;
                             align-items: center;
                             padding: 0.5rem 2rem;
                             border-right: 1px solid #CBCBCB;
                         }
                         .location {
+                            text-align: center;
                             padding: 0.5rem 2rem;
                         }
                     }
@@ -852,6 +857,16 @@ footer {
     #locations,
     #urniki {
         padding: 6rem 5rem !important;
+    }
+    #urniki {
+        .hour,
+        .location {
+            justify-content: center;
+            padding: 0.5rem 1rem !important;
+            svg {
+                margin-right: 0.5rem !important;
+            }
+        }
     }
 }
 
