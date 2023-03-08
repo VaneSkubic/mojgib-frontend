@@ -86,6 +86,10 @@ nav .nav-links #hamburger-icon {
   height: fit-content;
   display: none;
 }
+nav .nav-links .nav-link:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
 nav .nav-logo {
   display: flex;
   align-items: center;
@@ -626,13 +630,16 @@ footer .icon svg {
   margin: 1rem;
 }
 #urniki .urnik .table .day .times .time .hour,
-#urniki .urnik .table .day .times .time .location {
+#urniki .urnik .table .day .times .time .location a {
   display: flex;
   align-items: center;
 }
 #urniki .urnik .table .day .times .time .hour svg,
-#urniki .urnik .table .day .times .time .location svg {
+#urniki .urnik .table .day .times .time .location a svg {
   margin: 1rem;
+}
+#urniki .urnik .table .day .times .time .location a:hover {
+  transform: translateY(-2px);
 }
 #urniki .urnik .table .day .times .time .hour {
   padding-right: 3.5rem;
