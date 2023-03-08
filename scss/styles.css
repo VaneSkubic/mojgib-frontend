@@ -56,6 +56,10 @@ body {
   box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
 }
 
+.button:active {
+  transform: scale(0.95);
+}
+
 .double {
   text-shadow: 3px 3px 0px #FBCECE;
 }
@@ -86,12 +90,20 @@ nav .nav-links #hamburger-icon {
   height: fit-content;
   display: none;
 }
+nav .nav-links .nav-link:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
 nav .nav-logo {
   display: flex;
   align-items: center;
 }
 nav .nav-logo img {
   width: clamp(100px, 15vw, 180px);
+}
+nav .nav-logo:hover {
+  cursor: pointer;
+  transform: translateX(5px);
 }
 nav #mobile-menu {
   display: none;
@@ -153,7 +165,7 @@ footer .footer-right {
   gap: 1rem;
 }
 footer .footer-right a:hover {
-  transform: translateX(-3px);
+  transform: translateY(-2px);
 }
 footer .footer-right .contact {
   display: flex;
@@ -180,6 +192,7 @@ footer .icon svg {
   align-items: center;
   padding: 2rem 2rem;
   padding-top: calc(80px + 2rem);
+  min-height: 65vh;
 }
 #hero .hero-left {
   width: 40%;
@@ -299,6 +312,31 @@ footer .icon svg {
   margin-bottom: 1rem;
 }
 
+.bio {
+  backdrop-filter: blur(4px);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.bio:hover {
+  opacity: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
 #ekipa {
   padding: 7rem 10rem;
   display: flex;
@@ -331,28 +369,6 @@ footer .icon svg {
 #ekipa .wrapper .vaditelj .photo img {
   width: 100%;
   border-radius: 8px 8px 0 0;
-}
-#ekipa .wrapper .vaditelj .photo .bio {
-  backdrop-filter: blur(4px);
-  padding: 1rem 1.5rem;
-  text-align: center;
-  color: white;
-  border-radius: 8px 8px 0 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-}
-#ekipa .wrapper .vaditelj .photo .bio:hover {
-  opacity: 1;
-  cursor: pointer;
-  user-select: none;
 }
 #ekipa .wrapper .vaditelj .info {
   padding: 1rem 2rem;
@@ -426,7 +442,7 @@ footer .icon svg {
 }
 #contact .left .contact-source:hover {
   cursor: pointer;
-  transform: translateX(3px);
+  transform: translateY(-2px);
 }
 #contact .left h1 {
   font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
@@ -543,8 +559,11 @@ footer .icon svg {
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
+#artikli .artikel .top {
+  position: relative;
+}
 #artikli .artikel .top img {
-  height: 280px;
+  width: 300px;
   border-radius: 8px 8px 0 0;
 }
 #artikli .artikel .bottom {
@@ -605,8 +624,12 @@ footer .icon svg {
   padding: 1rem 1.5rem;
 }
 #urniki .urnik .table .day .header svg {
+  height: 30px;
+  width: 30px;
   margin: 1rem;
-  display: none;
+}
+#urniki .urnik .table .day .header svg path {
+  fill: white;
 }
 #urniki .urnik .table .day .times {
   background-color: white;
@@ -616,26 +639,29 @@ footer .icon svg {
 #urniki .urnik .table .day .times .time {
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 0;
 }
 #urniki .urnik .table .day .times .time svg {
-  margin: 1rem;
+  height: 30px;
+  margin-right: 1rem;
 }
-#urniki .urnik .table .day .times .time .hour,
-#urniki .urnik .table .day .times .time .location {
+#urniki .urnik .table .day .times .time .location a {
   display: flex;
   align-items: center;
 }
-#urniki .urnik .table .day .times .time .hour svg,
-#urniki .urnik .table .day .times .time .location svg {
-  margin: 1rem;
+#urniki .urnik .table .day .times .time .location a:hover {
+  transform: translateY(-2px);
 }
 #urniki .urnik .table .day .times .time .hour {
-  padding-right: 3.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
   border-right: 1px solid #CBCBCB;
 }
 #urniki .urnik .table .day .times .time .location {
-  margin-left: 2rem;
+  text-align: center;
+  padding: 0.5rem 2rem;
 }
 
 #locations {
@@ -774,11 +800,23 @@ footer .icon svg {
     width: 100%;
     z-index: 1;
   }
+  #vadbe,
+  #cenik,
+  #artikli,
+  #locations,
+  #metrics,
+  #ekipa,
+  #urniki {
+    padding: 6rem 5rem !important;
+  }
 }
 @media only screen and (max-width: 630px) {
   #metrics {
     flex-direction: column;
     gap: 4rem;
+  }
+  #metrics .number {
+    font-size: clamp(3.81rem, 5.18vw + 2.52rem, 6.66rem) !important;
   }
   #metrics .metric {
     gap: 0.5rem;
@@ -799,17 +837,19 @@ footer .icon svg {
   #cenik,
   #artikli,
   #locations,
-  #urniki {
-    padding: 6rem 5rem !important;
-  }
-}
-@media only screen and (max-width: 450px) {
-  #vadbe,
-  #cenik,
-  #artikli,
-  #locations,
   #mnenja,
+  #metrics,
+  #ekipa,
   #urniki {
     padding: 6rem 2rem !important;
+  }
+  #urniki .hour,
+  #urniki .location {
+    justify-content: center;
+    padding: 0.5rem 1rem !important;
+  }
+  #urniki .hour svg,
+  #urniki .location svg {
+    margin-right: 0.5rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */
