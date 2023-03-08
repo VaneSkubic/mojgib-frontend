@@ -99,6 +99,10 @@ nav {
             width: clamp(100px, 15vw, 180px);
         }
     }
+    .nav-logo:hover {
+        cursor: pointer;
+        transform: translateX(5px);
+    }
     #mobile-menu {
         display: none;
         position: fixed;

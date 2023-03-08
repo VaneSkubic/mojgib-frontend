@@ -93,6 +93,10 @@ nav .nav-logo {
 nav .nav-logo img {
   width: clamp(100px, 15vw, 180px);
 }
+nav .nav-logo:hover {
+  cursor: pointer;
+  transform: translateX(5px);
+}
 nav #mobile-menu {
   display: none;
   position: fixed;
