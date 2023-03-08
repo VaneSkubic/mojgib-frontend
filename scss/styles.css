@@ -312,6 +312,31 @@ footer .icon svg {
   margin-bottom: 1rem;
 }
 
+.bio {
+  backdrop-filter: blur(4px);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.bio:hover {
+  opacity: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
 #ekipa {
   padding: 7rem 10rem;
   display: flex;
@@ -344,28 +369,6 @@ footer .icon svg {
 #ekipa .wrapper .vaditelj .photo img {
   width: 100%;
   border-radius: 8px 8px 0 0;
-}
-#ekipa .wrapper .vaditelj .photo .bio {
-  backdrop-filter: blur(4px);
-  padding: 1rem 1.5rem;
-  text-align: center;
-  color: white;
-  border-radius: 8px 8px 0 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-}
-#ekipa .wrapper .vaditelj .photo .bio:hover {
-  opacity: 1;
-  cursor: pointer;
-  user-select: none;
 }
 #ekipa .wrapper .vaditelj .info {
   padding: 1rem 2rem;
@@ -474,7 +477,7 @@ footer .icon svg {
   justify-content: center;
   align-items: center;
   background-color: white;
-  border-bottom: 5px solid #D00000;
+  border-bottom: 5px solid #ffdfdf;
   padding: 0 2rem;
   padding-top: 60px;
   text-align: center;
@@ -556,8 +559,11 @@ footer .icon svg {
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
+#artikli .artikel .top {
+  position: relative;
+}
 #artikli .artikel .top img {
-  height: 280px;
+  width: 300px;
   border-radius: 8px 8px 0 0;
 }
 #artikli .artikel .bottom {
