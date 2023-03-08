@@ -56,6 +56,10 @@ body {
   box-shadow: 0px 100px 80px rgba(168, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
 }
 
+.button:active {
+  transform: scale(0.95);
+}
+
 .double {
   text-shadow: 3px 3px 0px #FBCECE;
 }
@@ -161,7 +165,7 @@ footer .footer-right {
   gap: 1rem;
 }
 footer .footer-right a:hover {
-  transform: translateX(-3px);
+  transform: translateY(-2px);
 }
 footer .footer-right .contact {
   display: flex;
@@ -188,6 +192,7 @@ footer .icon svg {
   align-items: center;
   padding: 2rem 2rem;
   padding-top: calc(80px + 2rem);
+  min-height: 65vh;
 }
 #hero .hero-left {
   width: 40%;
@@ -434,7 +439,7 @@ footer .icon svg {
 }
 #contact .left .contact-source:hover {
   cursor: pointer;
-  transform: translateX(3px);
+  transform: translateY(-2px);
 }
 #contact .left h1 {
   font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
@@ -469,7 +474,7 @@ footer .icon svg {
   justify-content: center;
   align-items: center;
   background-color: white;
-  border-bottom: 5px solid #ffdfdf;
+  border-bottom: 5px solid #D00000;
   padding: 0 2rem;
   padding-top: 60px;
   text-align: center;
@@ -789,11 +794,23 @@ footer .icon svg {
     width: 100%;
     z-index: 1;
   }
+  #vadbe,
+  #cenik,
+  #artikli,
+  #locations,
+  #metrics,
+  #ekipa,
+  #urniki {
+    padding: 6rem 5rem !important;
+  }
 }
 @media only screen and (max-width: 630px) {
   #metrics {
     flex-direction: column;
     gap: 4rem;
+  }
+  #metrics .number {
+    font-size: clamp(3.81rem, 5.18vw + 2.52rem, 6.66rem) !important;
   }
   #metrics .metric {
     gap: 0.5rem;
@@ -814,8 +831,11 @@ footer .icon svg {
   #cenik,
   #artikli,
   #locations,
+  #mnenja,
+  #metrics,
+  #ekipa,
   #urniki {
-    padding: 6rem 5rem !important;
+    padding: 6rem 2rem !important;
   }
   #urniki .hour,
   #urniki .location {
@@ -825,15 +845,5 @@ footer .icon svg {
   #urniki .hour svg,
   #urniki .location svg {
     margin-right: 0.5rem !important;
-  }
-}
-@media only screen and (max-width: 450px) {
-  #vadbe,
-  #cenik,
-  #artikli,
-  #locations,
-  #mnenja,
-  #urniki {
-    padding: 6rem 2rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */
