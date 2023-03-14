@@ -205,6 +205,7 @@ footer .icon svg {
   min-height: 65vh;
 }
 #hero .hero-left {
+  position: relative;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -221,6 +222,7 @@ footer .icon svg {
   margin-bottom: 1rem;
 }
 #hero .hero-right {
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -239,9 +241,9 @@ footer .icon svg {
   font-weight: 600;
 }
 #vadbe .vadba {
-  transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-25px);
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background-color: white;
@@ -316,24 +318,30 @@ footer .icon svg {
   gap: 5rem;
 }
 #mnenja .wrapper .mnenje {
-  transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
   transform: translateY(20px);
-  width: 250px;
+  width: 300px;
   font-weight: 300;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+#mnenja .wrapper .mnenje p {
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 }
 #mnenja .wrapper .mnenje span {
   font-weight: 500;
-  text-decoration: underline;
+}
+#mnenja .wrapper .mnenje span:before,
+#mnenja .wrapper .mnenje span:after {
+  content: " - ";
 }
 #mnenja .wrapper .mnenje .icon img {
-  height: 30px;
-  margin-bottom: 1rem;
+  height: 35px;
+  margin-bottom: 0.5rem;
 }
 #mnenja .wrapper .mnenje.scrolled {
   opacity: 1;
@@ -491,6 +499,11 @@ footer .icon svg {
 #contact .right textarea {
   resize: none;
   scroll-padding-bottom: 1rem;
+}
+#contact .right input:focus,
+#contact .right textarea:focus {
+  border: 1px solid #B70100;
+  outline: 1px solid #B70100;
 }
 #contact .right *:not(.button) {
   width: 100%;

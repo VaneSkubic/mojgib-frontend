@@ -41,8 +41,42 @@ const handleScrollAnimation = () => {
     })
 }
 
+function scrollAnimations() {
+    var downElements = document.getElementsByClassName('scroll-down');
+    var upElements = document.getElementsByClassName('scroll-up');
+    var speed = 0.05
 
+
+    for (let i = 0; i < downElements.length; i++) {
+        var elementTop = downElements[i].getBoundingClientRect().top;
+
+        if (elementTop > 0 && elementTop < window.innerHeight) {
+            console.log(elementTop * speed - (window.innerHeight / 2) * speed)
+            downElements[i].style.bottom = elementTop * speed - (window.innerHeight / 2) * speed + "px";
+        }
+
+    }
+    for (let i = 0; i < upElements.length; i++) {
+        var elementTop = upElements[i].getBoundingClientRect().top;
+
+        if (elementTop > 0 && elementTop < window.innerHeight) {
+            upElements[i].style.top = elementTop * speed - (window.innerHeight / 2) * speed + "px";
+        }
+
+    }
+
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos == 0) {
+        for (let i = 0; i < downElements.length; i++) {
+            downElements[i].style.bottom = "0px";
+        }
+        for (let i = 0; i < upElements.length; i++) {
+            upElements[i].style.top = "0px";
+        }
+    }
+}
 
 window.addEventListener("scroll", () => {
     handleScrollAnimation();
+    scrollAnimations();
 });
