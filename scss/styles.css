@@ -35,6 +35,16 @@ body {
   background-position-y: 200px;
 }
 
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}
+@supports not (-webkit-touch-callout: none) {
+  body {
+    background-attachment: fixed;
+  }
+}
 .button {
   text-decoration: none;
   color: white;
@@ -224,7 +234,14 @@ footer .icon svg {
   flex-direction: column;
   gap: 3rem;
 }
+#vadbe h1 {
+  font-size: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  font-weight: 600;
+}
 #vadbe .vadba {
+  transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+  opacity: 0;
+  transform: translateX(-100px);
   box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background-color: white;
@@ -251,6 +268,10 @@ footer .icon svg {
 }
 #vadbe .vadba .right h2 {
   font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+}
+#vadbe .vadba.scrolled {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .blurred {
@@ -295,6 +316,9 @@ footer .icon svg {
   gap: 5rem;
 }
 #mnenja .wrapper .mnenje {
+  transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+  opacity: 0;
+  transform: translateY(20px);
   width: 250px;
   font-weight: 300;
   text-align: center;
@@ -310,6 +334,10 @@ footer .icon svg {
 #mnenja .wrapper .mnenje .icon img {
   height: 30px;
   margin-bottom: 1rem;
+}
+#mnenja .wrapper .mnenje.scrolled {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bio {

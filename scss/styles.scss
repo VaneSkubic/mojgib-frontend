@@ -43,6 +43,18 @@ body {
     background-position-y: 200px;
 }
 
+@supports ( -webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll
+    }
+}
+
+@supports not ( -webkit-touch-callout: none) {
+    body {
+        background-attachment: fixed;
+    }
+}
+
 .button {
     text-decoration: none;
     color: white;
@@ -227,11 +239,18 @@ footer {
 }
 
 #vadbe {
+    h1 {
+        font-size: $font-size-xl;
+        font-weight: 600;
+    }
     padding: 6rem 10rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     .vadba {
+        transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+        opacity: 0;
+        transform: translateX(-100px);
         box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
         background-color: white;
@@ -258,6 +277,10 @@ footer {
             justify-content: center;
             align-items: flex-start;
         }
+    }
+    .vadba.scrolled {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -301,6 +324,9 @@ footer {
         flex-wrap: wrap;
         gap: 5rem;
         .mnenje {
+            transition: all 0.25s cubic-bezier(0.83, 0, 0.17, 1) 0s;
+            opacity: 0;
+            transform: translateY(20px);
             width: 250px;
             font-weight: 300;
             text-align: center;
@@ -318,6 +344,10 @@ footer {
                     margin-bottom: 1rem;
                 }
             }
+        }
+        .mnenje.scrolled {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }
