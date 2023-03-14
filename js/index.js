@@ -23,7 +23,7 @@ window.onload = function() {
 
 var prevScrollpos = window.pageYOffset;
 var nav = document.getElementById("nav");
-window.onscroll = function() {
+window.addEventListener('scroll', function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
         nav.style.top = "0";
@@ -31,7 +31,7 @@ window.onscroll = function() {
         nav.style.top = "-100px";
     }
     prevScrollpos = currentScrollPos;
-}
+})
 
 var hamburgerIcon = document.getElementById("hamburger-icon");
 var closeIcon = document.getElementById("close-icon");
