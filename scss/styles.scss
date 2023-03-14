@@ -43,6 +43,18 @@ body {
     background-position-y: 200px;
 }
 
+@supports ( -webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll
+    }
+}
+
+@supports not ( -webkit-touch-callout: none) {
+    body {
+        background-attachment: fixed;
+    }
+}
+
 .button {
     text-decoration: none;
     color: white;
