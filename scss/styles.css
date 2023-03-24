@@ -848,7 +848,6 @@ footer .icon svg {
   #contact {
     flex-direction: column;
     gap: 4rem;
-    padding: 7rem 2rem;
   }
   #contact .left h1 {
     width: fit-content;
@@ -870,13 +869,7 @@ footer .icon svg {
     width: 100%;
     z-index: 1;
   }
-  #vadbe,
-  #cenik,
-  #artikli,
-  #locations,
-  #metrics,
-  #ekipa,
-  #urniki {
+  .responsive-content {
     padding: 6rem 5rem !important;
   }
 }
@@ -903,15 +896,8 @@ footer .icon svg {
   footer .footer-right .contact .icon {
     margin-left: -5px;
   }
-  #vadbe,
-  #cenik,
-  #artikli,
-  #locations,
-  #mnenja,
-  #metrics,
-  #ekipa,
-  #urniki {
-    padding: 6rem 2rem !important;
+  .responsive-content {
+    padding: 6rem 1.5rem !important;
   }
   #urniki .hour,
   #urniki .location {

@@ -886,7 +886,7 @@ footer {
     #contact {
         flex-direction: column;
         gap: 4rem;
-        padding: 7rem 2rem;
+        // padding: 7rem 2rem;
         .left h1 {
             width: fit-content;
         }
@@ -909,13 +909,7 @@ footer {
             z-index: 1;
         }
     }
-    #vadbe,
-    #cenik,
-    #artikli,
-    #locations,
-    #metrics,
-    #ekipa,
-    #urniki {
+    .responsive-content {
         padding: 6rem 5rem !important;
     }
 }
@@ -945,15 +939,8 @@ footer {
             margin-left: -5px;
         }
     }
-    #vadbe,
-    #cenik,
-    #artikli,
-    #locations,
-    #mnenja,
-    #metrics,
-    #ekipa,
-    #urniki {
-        padding: 6rem 2rem !important;
+    .responsive-content {
+        padding: 6rem 1.5rem !important;
     }
     #urniki {
         .hour,
