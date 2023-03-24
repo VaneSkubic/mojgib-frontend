@@ -511,26 +511,44 @@ footer {
             }
         }
     }
-    .right {
+    .form {
+        position: relative;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        textarea {
-            resize: none;
-            scroll-padding-bottom: 1rem;
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            opacity: 1;
+            textarea {
+                resize: none;
+                scroll-padding-bottom: 1rem;
+            }
+            input:focus,
+            textarea:focus {
+                border: 1px solid #B70100;
+                outline: 1px solid #B70100;
+            }
+            *:not(.button) {
+                width: 100%;
+                border: 1px solid #A4A4A4;
+                border-radius: 8px;
+                padding: 0.5rem 1.2rem;
+            }
         }
-        input:focus,
-        textarea:focus {
-            border: 1px solid #B70100;
-            outline: 1px solid #B70100;
-        }
-        *:not(.button) {
-            width: 100%;
-            border: 1px solid #A4A4A4;
-            border-radius: 8px;
-            padding: 0.5rem 1.2rem;
+        .success {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            transform: translateY(-50px);
+            top: 0;
+            left: 0;
+            h1 {
+                font-size: $font-size-lg;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+            flex: 1;
         }
     }
 }

@@ -1,21 +1,25 @@
-emailjs.init('03OqSVaC9xrZ19mh3');
+// emailjs.init('03OqSVaC9xrZ19mh3');
+emailjs.init(' ');
 window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
+        console.log('sending')
         event.preventDefault();
         var contactParams = {
             name: document.getElementById('name').value,
             email: document.getElementById("email").value,
             message: document.getElementById('message').value,
         }
+        var button = document.getElementsByClassName('button submit')[0];
+        button.value = "Pošiljam 📨";
+        button.disabled = true;
         emailjs.send('service_cm9h7ra', 'template_vt3zs5i', contactParams).then(
             function() {
-                var button = document.getElementsByClassName('button submit')[0];
-                button.value = "Poslano 👍";
-                button.style.background = 'linear-gradient(96.44deg, #0FB700 0%, #05E800 100%)'
+                hideForm()
             },
             function(error) {
                 var button = document.getElementsByClassName('button submit')[0];
                 button.value = "Napaka 😭";
+                console.log(error)
             }
         )
     });
@@ -95,4 +99,15 @@ for (var i = 0; i < mobileMenuLinks.length; i++) {
     mobileMenuLinks[i].onclick = function() {
         hideMobileMenu()
     }
+}
+
+window.hideForm = function hideForm() {
+    var form = document.getElementById('contact-form');
+    var confirmation = document.getElementById('form-success');
+    form.style.opacity = "0";
+    form.style.visibility = "hidden";
+    form.style.transform = "translateY(50px)";
+    confirmation.style.transform = "translateY(0)";
+    confirmation.style.visibility = "visible";
+    confirmation.style.opacity = "1";
 }
