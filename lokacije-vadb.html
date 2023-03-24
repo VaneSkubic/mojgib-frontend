@@ -90,7 +90,7 @@
                 <p>Vadbe potekajo v lepo urejenih, ogrevanih dvoranah na treh lokacijah z zagotovljenim parkingom.</p>
             </div>
         </section>
-        <section id="locations">
+        <section id="locations" class="responsive-content">
             <div id="sportna-dvorana" class="location">
                 <h1 class="location-heading double">
                     Dolnji Logatec
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="responsive-content">
             <div class="left">
                 <h1>
                     <span class="red">Skupaj</span> lahko dosežemo vse
@@ -196,12 +196,20 @@
                     <p>040 763 009 <span class="">(po 16h)</span></p>
                 </a>
             </div>
-            <form id="contact-form" class="right">
-                <input id="name" type="text" placeholder="Ime in priimek">
-                <input id="email" type="email" placeholder="Email">
-                <textarea id="message" cols="30" rows="10" placeholder="Vaše sporočilo"></textarea>
-                <input type="submit" class="button submit" value="Pošlji">
-            </form>
+            <div class="form">
+                <div class="success" id="form-success">
+                    <h1>Uspešno poslano! 🎉</h1>
+                    <p>
+                        Naša ekipa vam bo odgovorila kar se da hitro.
+                    </p>
+                </div>
+                <form id="contact-form" class="right">
+                    <input id="name" type="text" placeholder="Ime in priimek">
+                    <input id="email" type="email" placeholder="Email">
+                    <textarea id="message" cols="30" rows="10" placeholder="Vaše sporočilo"></textarea>
+                    <input type="submit" class="button submit" value="Pošlji">
+                </form>
+            </div>
         </section>
     </main>
     <footer>
