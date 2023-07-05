@@ -55,6 +55,10 @@ body {
     }
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .button {
     text-decoration: none;
     color: white;
@@ -99,6 +103,28 @@ p {
     color: #333;
 }
 
+.link{
+    background:
+        linear-gradient(
+        to right,
+        rgba(100, 200, 200, 0),
+        rgba(100, 200, 200, 0)
+        ),
+        linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1),
+        );  
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: all 200ms;
+}
+
+.link:hover {
+    background-size: 0 1px, 100% 1px;
+}
+
 nav {
     transition: padding 0.2s;
     z-index: 2;
@@ -116,6 +142,7 @@ nav {
         display: flex;
         align-items: center;
         gap: 3rem;
+
         #hamburger-icon {
             height: fit-content;
             display: none;
