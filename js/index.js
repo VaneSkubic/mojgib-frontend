@@ -56,8 +56,8 @@ function scrollAnimations() {
     }
 }
 
-var prevScrollpos = window.pageYOffset;
-var nav = document.getElementById("nav");
+// var prevScrollpos = window.pageYOffset;
+// var nav = document.getElementById("nav");
 // window.addEventListener('scroll', function () {
 //     var currentScrollPos = window.pageYOffset;
 //     if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
@@ -68,6 +68,19 @@ var nav = document.getElementById("nav");
 //     prevScrollpos = currentScrollPos;
 //     scrollAnimations();
 // })
+
+var nav = document.getElementById("nav");
+window.addEventListener('scroll', function () {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos <= 0) {
+        nav.style.padding = "1.5rem 2rem";
+        nav.style.borderBottom = "none";
+    } else {
+        nav.style.padding = "0.8rem 2rem";
+        nav.style.borderBottom = "1px solid rgba(0, 0, 0, 0.05)";
+    }
+    scrollAnimations();
+})
 
 var hamburgerIcon = document.getElementById("hamburger-icon");
 var closeIcon = document.getElementById("close-icon");
