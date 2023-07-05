@@ -99,15 +99,12 @@ p {
 }
 
 nav {
-  transition: padding 0.2s;
+  transition: padding 0.2s, background-color 0.2s, backdrop-filter 0.2s;
   z-index: 2;
   position: fixed;
   top: 0;
   display: block;
   width: 100%;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.72);
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -147,6 +144,7 @@ nav #mobile-menu {
   z-index: 1;
   align-items: center;
   flex-direction: column;
+  transition: none;
 }
 nav #mobile-menu .upper {
   width: 100%;
@@ -227,6 +225,9 @@ footer .icon svg {
   padding: 2rem 2rem;
   padding-top: calc(80px + 2rem);
   min-height: 65vh;
+  background-image: linear-gradient(135deg, rgba(183, 0, 0, 0.0666666667) 0%, rgba(232, 0, 0, 0.1058823529) 100%);
+  position: relative;
+  overflow: hidden;
 }
 #hero .hero-left {
   position: relative;
@@ -252,6 +253,77 @@ footer .icon svg {
 }
 #hero .hero-right img {
   width: 100%;
+}
+#hero #up {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, rgba(183, 0, 0, 0.0666666667) 0%, rgba(232, 0, 0, 0.1058823529) 100%);
+  filter: blur(100px);
+  top: 0;
+  left: 0;
+  animation: down 30s infinite;
+}
+@keyframes down {
+  0%, 100% {
+    top: -100px;
+  }
+  70% {
+    top: 700px;
+  }
+}
+#hero #down {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, rgba(183, 0, 0, 0.0666666667) 0%, rgba(232, 0, 0, 0.0784313725) 100%);
+  filter: blur(100px);
+  animation: up 30s infinite;
+}
+@keyframes up {
+  0%, 100% {
+    bottom: -100px;
+  }
+  70% {
+    bottom: 700px;
+  }
+}
+#hero #left {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, rgba(183, 0, 0, 0.0431372549) 0%, rgba(232, 0, 0, 0.0588235294) 100%);
+  filter: blur(100px);
+  animation: left 30s infinite;
+}
+@keyframes left {
+  0%, 100% {
+    left: -100px;
+  }
+  70% {
+    left: 1300px;
+  }
+}
+#hero #left {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, rgba(183, 0, 0, 0.0352941176) 0%, rgba(232, 0, 0, 0.0431372549) 100%);
+  filter: blur(100px);
+  animation: right 30s infinite;
+}
+@keyframes right {
+  0%, 100% {
+    right: -100px;
+  }
+  70% {
+    right: 1300px;
+  }
 }
 
 #vadbe {
@@ -540,7 +612,7 @@ footer .icon svg {
 }
 #contact .form .right *:not(.button) {
   width: 100%;
-  border: 1px solid #A4A4A4;
+  border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 8px;
   padding: 0.5rem 1.2rem;
 }
@@ -846,10 +918,6 @@ footer .icon svg {
   }
 }
 @media only screen and (max-width: 900px) {
-  #nav {
-    backdrop-filter: none;
-    background-color: white;
-  }
   #nav .nav-links {
     gap: 2rem;
   }

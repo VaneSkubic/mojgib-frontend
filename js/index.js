@@ -75,9 +75,13 @@ window.addEventListener('scroll', function () {
     if (currentScrollPos <= 0) {
         nav.style.padding = "1.5rem 2rem";
         nav.style.borderBottom = "none";
+        nav.style.backdropFilter = "blur(0px)";
+        nav.style.backgroundColor = "rgba(0, 0, 0, 0)";
     } else {
         nav.style.padding = "0.8rem 2rem";
         nav.style.borderBottom = "1px solid rgba(0, 0, 0, 0.05)";
+        nav.style.backdropFilter = "blur(20px) saturate(180%)";
+        nav.style.backgroundColor = "rgba(255, 255, 255, 0.72)";
     }
     scrollAnimations();
 })
@@ -89,11 +93,18 @@ var mobileMenu = document.getElementById("mobile-menu");
 function hideMobileMenu() {
     mobileMenu.style.transform = "translateX(-100%)";
     document.body.style.overflow = "visible";
+    var nav = document.getElementById("nav");
+    nav.style.transition = "none";
+    nav.style.backdropFilter = "blur(20px) saturate(180%)";
+    nav.style.backgroundColor = "rgba(255, 255, 255, 0.72)";
 }
 
 hamburgerIcon.onclick = function () {
     mobileMenu.style.transform = "translateX(0)";
     document.body.style.overflow = "hidden";
+    var nav = document.getElementById("nav");
+    nav.style.backdropFilter = "none";
+    nav.style.backgroundColor = "white";
 }
 closeIcon.onclick = function () {
     hideMobileMenu()
