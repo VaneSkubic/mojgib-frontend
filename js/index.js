@@ -1,6 +1,6 @@
 emailjs.init('03OqSVaC9xrZ19mh3');
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+window.onload = function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         var contactParams = {
             name: document.getElementById('name').value,
@@ -11,10 +11,10 @@ window.onload = function() {
         button.value = "Pošiljam 📨";
         button.disabled = true;
         emailjs.send('service_cm9h7ra', 'template_vt3zs5i', contactParams).then(
-            function() {
+            function () {
                 hideForm()
             },
-            function(error) {
+            function (error) {
                 var button = document.getElementsByClassName('button submit')[0];
                 button.value = "Napaka 😭";
                 console.log(error)
@@ -58,7 +58,7 @@ function scrollAnimations() {
 
 var prevScrollpos = window.pageYOffset;
 var nav = document.getElementById("nav");
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
         nav.style.top = "0";
@@ -78,21 +78,21 @@ function hideMobileMenu() {
     document.body.style.overflow = "visible";
 }
 
-hamburgerIcon.onclick = function() {
+hamburgerIcon.onclick = function () {
     mobileMenu.style.transform = "translateX(0)";
     document.body.style.overflow = "hidden";
 }
-closeIcon.onclick = function() {
+closeIcon.onclick = function () {
     hideMobileMenu()
 }
 
 var mobileMenuLinks = document.getElementsByClassName("mobile nav-link");
 var mobileMenuAction = document.getElementsByClassName("mobile button")[0];
-mobileMenuAction.onclick = function() {
+mobileMenuAction.onclick = function () {
     hideMobileMenu()
 }
 for (var i = 0; i < mobileMenuLinks.length; i++) {
-    mobileMenuLinks[i].onclick = function() {
+    mobileMenuLinks[i].onclick = function () {
         hideMobileMenu()
     }
 }
