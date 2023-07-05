@@ -58,16 +58,16 @@ function scrollAnimations() {
 
 var prevScrollpos = window.pageYOffset;
 var nav = document.getElementById("nav");
-window.addEventListener('scroll', function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
-        nav.style.top = "0";
-    } else {
-        nav.style.top = "-100px";
-    }
-    prevScrollpos = currentScrollPos;
-    scrollAnimations();
-})
+// window.addEventListener('scroll', function () {
+//     var currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
+//         nav.style.top = "0";
+//     } else {
+//         nav.style.top = "-100px";
+//     }
+//     prevScrollpos = currentScrollPos;
+//     scrollAnimations();
+// })
 
 var hamburgerIcon = document.getElementById("hamburger-icon");
 var closeIcon = document.getElementById("close-icon");
