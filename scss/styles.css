@@ -226,7 +226,7 @@ footer .icon svg {
   padding-top: calc(80px + 2rem);
   min-height: 65vh;
   position: relative;
-  background: linear-gradient(to bottom right, hsl(0, 100%, 98%), hsla(0, 88%, 90%, 0.863));
+  background: linear-gradient(to bottom right, hsla(0, 100%, 98%, 0.863), hsla(0, 88%, 90%, 0.842));
 }
 #hero .hero-left {
   position: relative;
@@ -246,6 +246,7 @@ footer .icon svg {
   margin-bottom: 1rem;
 }
 #hero .hero-right {
+  margin: 2rem 0;
   position: relative;
   display: flex;
   justify-content: center;
