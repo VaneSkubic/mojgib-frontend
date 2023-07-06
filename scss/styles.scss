@@ -60,31 +60,56 @@ a:hover{
 }
 
 .button {
+    position: relative;
     text-decoration: none;
     color: white;
     border: none !important;
     border-radius: 8px;
-    background: hsla(0, 100%, 36%, 1);
-    background: linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
-    background: -moz-linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
     padding: 10px 25px;
     font-weight: 600;
     font-size: $font-size-base;
 }
 
+.button:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: hsla(0, 100%, 36%, 1);
+    background: linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(0, 100%, 36%, 1) 0%, hsla(0, 100%, 45%, 1) 100%);
+    border-radius: 8px;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    
+}
+
+.button:after{
+    position: absolute;
+    content: url(../assets/icons/arrow.svg);
+    top: 50%;
+    transform: translate(-8px, -40%);
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
 .button:hover {
     cursor: pointer;
-    transform: translateY(-2px);
+    // transform: translateY(-2px);
     text-decoration: none;
-    // box-shadow: 
-    //     0px 100px 80px rgba(168, 0, 0, 0.07), 
-    //     0px 41.7776px 33.4221px rgba(168, 0, 0, 0.0503198), 
-    //     0px 22.3363px 17.869px rgba(168, 0, 0, 0.0417275), 
-    //     0px 12.5216px 10.0172px rgba(168, 0, 0, 0.035), 
-    //     0px 6.6501px 5.32008px rgba(168, 0, 0, 0.0282725), 
-    //     0px 2.76726px 2.21381px rgba(168, 0, 0, 0.0196802);
-    box-shadow: 0 1px 1px rgba(168, 0, 0, 0.07), 0 2px 2px rgba(168, 0, 0, 0.07), 0 4px 4px rgba(168, 0, 0, 0.07), 0 8px 8px rgba(168, 0, 0, 0.07), 0 16px 16px rgba(168, 0, 0, 0.07);
+    &:after{
+        opacity: 1;
+        transform: translate(2px, -40%);
+    }
+    &:before {
+        box-shadow: 0 1px 1px rgba(168, 0, 0, 0.07), 0 2px 2px rgba(168, 0, 0, 0.07), 0 4px 4px rgba(168, 0, 0, 0.07), 0 8px 8px rgba(168, 0, 0, 0.07), 0 16px 16px rgba(168, 0, 0, 0.07);
+        transform: scaleX(1.06);
+        transform-origin: left;
+        }
 }
 
 .button:active {
@@ -251,7 +276,7 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1;
+    z-index: -2;
 }
 
 .gradient-background {
