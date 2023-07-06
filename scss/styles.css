@@ -265,6 +265,7 @@ footer .icon svg {
 }
 #hero .hero-right img {
   width: 100%;
+  filter: drop-shadow(5px 5px 29px rgba(0, 0, 0, 0.08));
 }
 
 #vadbe {
