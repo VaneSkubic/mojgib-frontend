@@ -456,7 +456,7 @@ footer .icon svg {
   align-items: center;
   justify-content: center;
 }
-#ekipa .wrapper .vaditelj .info h3 {
+#ekipa .wrapper .vaditelj .info h2 {
   font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
   font-weight: 600;
 }
