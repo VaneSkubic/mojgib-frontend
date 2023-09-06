@@ -823,13 +823,39 @@ footer {
         .container {
             box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            overflow: hidden;
             background-color: white;
             display: flex;
             gap: 1rem;
-            .map {
+            .left{
                 border-right: 6px solid #FFDBDB;
-                iframe {
-                    display: block;
+                .map {
+                    position: relative;
+                    background: url(../assets/lokacije/buum_arena.webp);
+                    background-size: cover;
+                    background-position: center;
+                    iframe {
+                        display: block;
+                    }
+                }
+                display: flex;
+                flex-direction: column;
+                .buttons{
+                    display: flex;
+                    .active{
+                        background: -webkit-linear-gradient(135deg, hsl(0, 100%, 36%) 0%, hsl(0, 100%, 45%) 100%);
+                        color: white;
+                    }
+                    button{
+                        flex: 1;
+                        text-align: center;
+                        padding: 1rem 0;
+                        font-size: $font-size-base;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: #fdefef;
+                        }
+                    }
                 }
             }
             .location-info {
@@ -856,11 +882,13 @@ footer {
             .container {
                 gap: 0;
                 flex-direction: column;
-                .map {
-                    border-right: none;
+                .left{
                     border-bottom: 6px solid #FFDBDB;
-                    iframe {
-                        width: 100%;
+                    border-right: none;
+                    .map {
+                        iframe {
+                            width: 100%;
+                        }
                     }
                 }
                 .location-info {
