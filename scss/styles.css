@@ -282,7 +282,7 @@ footer .icon svg {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
   transform: translateX(-25px);
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   background-color: white;
   display: flex;
@@ -434,7 +434,7 @@ footer .icon svg {
 #ekipa .wrapper .vaditelj {
   border-radius: 8px;
   width: 220px;
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -609,7 +609,7 @@ footer .icon svg {
   width: 300px;
   border-radius: 8px;
   background-color: white;
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
 }
 #cenik .paket .top {
   text-transform: uppercase;
@@ -642,7 +642,6 @@ footer .icon svg {
   margin: 1rem 0;
 }
 #cenik .paket:hover {
-  cursor: pointer;
   transform: scale(1.03);
 }
 
@@ -657,7 +656,7 @@ footer .icon svg {
 }
 #artikli .artikel {
   background-color: white;
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
 }
 #artikli .artikel .top {
@@ -707,7 +706,7 @@ footer .icon svg {
 #urniki .urnik .table {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 12px 48px rgba(26, 33, 52, 0.11);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -777,7 +776,7 @@ footer .icon svg {
   font-weight: 600;
 }
 #locations .location .container {
-  box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   overflow: hidden;
   background-color: white;

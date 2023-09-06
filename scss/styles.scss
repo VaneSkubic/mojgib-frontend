@@ -317,7 +317,13 @@ footer {
         transition: all .6s cubic-bezier(0.16, 1, 0.3, 1);
         opacity: 0;
         transform: translateX(-25px);
-        box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
+        // box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.15);
+        box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;
         border-radius: 8px;
         background-color: white;
         display: flex;
@@ -470,7 +476,13 @@ footer {
         .vaditelj {
             border-radius: 8px;
             width: 220px;
-            box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+            // box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+            box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;
             background-color: white;
             display: flex;
             flex-direction: column;
@@ -646,7 +658,13 @@ footer {
         width: 300px;
         border-radius: 8px;
         background-color: white;
-        box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+        // box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+        box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;
         .top {
             text-transform: uppercase;
             line-height: 2.8rem;
@@ -681,7 +699,6 @@ footer {
         }
     }
     .paket:hover {
-        cursor: pointer;
         transform: scale(1.03);
     }
 }
@@ -703,8 +720,14 @@ footer {
             }
         }
         background-color: white;
-        box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        // box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+        
+        box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;border-radius: 8px;
         .bottom {
             margin: 1rem;
             display: flex;
@@ -747,7 +770,13 @@ footer {
         .table {
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 12px 48px rgb(26 33 52 / 11%);
+            // box-shadow: 0 12px 48px rgb(26 33 52 / 11%);
+            box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;
             display: flex;
             flex-direction: column;
             .day {
@@ -821,7 +850,13 @@ footer {
             font-weight: 600;
         }
         .container {
-            box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+            // box-shadow: 0px 4px 74px rgba(0, 0, 0, 0.1);
+            box-shadow:
+  0px 1.8px 3.7px rgba(0, 0, 0, 0.017),
+  0px 5px 10.1px rgba(0, 0, 0, 0.025),
+  0px 12.1px 24.4px rgba(0, 0, 0, 0.033),
+  0px 40px 81px rgba(0, 0, 0, 0.05)
+;
             border-radius: 8px;
             overflow: hidden;
             background-color: white;
