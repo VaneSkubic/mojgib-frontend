@@ -229,6 +229,26 @@ footer .icon svg {
 }
 
 #hero {
+  background-image: url(../assets/gradients/1.webp);
+}
+
+#lokacije-page {
+  background-image: url(../assets/gradients/2.webp);
+}
+
+#artikli-page {
+  background-image: url(../assets/gradients/3.webp);
+}
+
+#urniki-page {
+  background-image: url(../assets/gradients/4.webp);
+}
+
+#cenik-page {
+  background-image: url(../assets/gradients/5.webp);
+}
+
+#hero {
   gap: 3rem;
   display: none;
   border-bottom: 1px solid #e4e4ee;
@@ -239,6 +259,7 @@ footer .icon svg {
   padding: 2rem 2rem;
   padding-top: calc(80px + 2rem);
   min-height: 65vh;
+  background-size: cover;
 }
 #hero .hero-left {
   position: relative;
@@ -579,7 +600,7 @@ footer .icon svg {
   margin-bottom: 0.5rem;
 }
 
-#title {
+.title {
   height: 60vh;
   display: flex;
   justify-content: center;
@@ -589,7 +610,7 @@ footer .icon svg {
   padding-top: 60px;
   text-align: center;
 }
-#title .wrapper {
+.title .wrapper {
   gap: 1rem;
   text-align: center;
   display: flex;
@@ -597,7 +618,7 @@ footer .icon svg {
   align-items: center;
   max-width: 500px;
 }
-#title .wrapper h1 {
+.title .wrapper h1 {
   font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   font-weight: 600;
   text-align: center;
@@ -904,7 +925,7 @@ footer .icon svg {
     display: flex;
     transform: translateX(-100%);
   }
-  #title {
+  .title {
     height: 50vh;
   }
 }

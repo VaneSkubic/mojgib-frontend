@@ -263,6 +263,26 @@ footer {
     );
 }
 
+#hero{
+    background-image: url(../assets/gradients/1.webp);
+}
+
+#lokacije-page{
+    background-image: url(../assets/gradients/2.webp);
+}
+
+#artikli-page{
+    background-image: url(../assets/gradients/3.webp);
+}
+
+#urniki-page{
+    background-image: url(../assets/gradients/4.webp);
+}
+
+#cenik-page{
+    background-image: url(../assets/gradients/5.webp);
+}
+
 #hero {
     gap: 3rem;
     display: none;
@@ -274,6 +294,7 @@ footer {
     padding: 2rem 2rem;
     padding-top: calc(80px + 2rem);
     min-height: 65vh;
+    background-size: cover;
     .hero-left {
         position: relative;
         width: 40%;
@@ -634,7 +655,7 @@ footer {
     }
 }
 
-#title {
+.title {
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -1010,7 +1031,7 @@ footer {
             transform: translateX(-100%);
         }
     }
-    #title {
+    .title {
         height: 50vh;
     }
 }
