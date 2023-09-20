@@ -256,6 +256,7 @@ footer .icon svg {
 #hero .hero-left p {
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   margin-bottom: 1rem;
+  max-width: 650px;
 }
 #hero .hero-right {
   margin: 2rem 0;
