@@ -230,22 +230,27 @@ footer .icon svg {
 
 #hero {
   background-image: url(../assets/gradients/1.webp);
+  background-size: cover;
 }
 
 #lokacije-page {
   background-image: url(../assets/gradients/2.webp);
+  background-size: cover;
 }
 
 #artikli-page {
   background-image: url(../assets/gradients/3.webp);
+  background-size: cover;
 }
 
 #urniki-page {
   background-image: url(../assets/gradients/4.webp);
+  background-size: cover;
 }
 
 #cenik-page {
   background-image: url(../assets/gradients/5.webp);
+  background-size: cover;
 }
 
 #hero {
@@ -259,7 +264,6 @@ footer .icon svg {
   padding: 2rem 2rem;
   padding-top: calc(80px + 2rem);
   min-height: 65vh;
-  background-size: cover;
 }
 #hero .hero-left {
   position: relative;
