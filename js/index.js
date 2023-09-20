@@ -140,11 +140,13 @@ var zemljevidButton = document.getElementById("zemljevid-button");
 var slikaButton = document.getElementById("slika-button");
 var map = document.getElementById("buum-google-maps");
 
-zemljevidButton.onclick = function () {
-    map.style.visibility = "visible";
-    map.style.opacity = "1";
-    slikaButton.classList.remove("active");
-    zemljevidButton.classList.add("active");
+if (zemljevidButton != null) {
+    zemljevidButton.onclick = function () {
+        map.style.visibility = "visible";
+        map.style.opacity = "1";
+        slikaButton.classList.remove("active");
+        zemljevidButton.classList.add("active");
+    }
 }
 
 slikaButton.onclick = function () {
