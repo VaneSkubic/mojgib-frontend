@@ -662,7 +662,7 @@ footer {
 }
 
 .title {
-    height: 60vh;
+    height: 47vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -670,6 +670,7 @@ footer {
     padding: 0 2rem;
     padding-top: 60px;
     text-align: center;
+    background-color: #fedfdc;
     .wrapper {
         h1 {
             font-size: $font-size-xxl;
