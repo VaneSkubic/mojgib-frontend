@@ -460,10 +460,11 @@ footer .icon svg {
 #ekipa .wrapper {
   display: flex;
   gap: 8rem;
+  align-items: flex-start;
 }
 #ekipa .wrapper .vaditelj {
   border-radius: 8px;
-  width: 220px;
+  width: 250px;
   box-shadow: 0px 1.8px 3.7px rgba(0, 0, 0, 0.017), 0px 5px 10.1px rgba(0, 0, 0, 0.025), 0px 12.1px 24.4px rgba(0, 0, 0, 0.033), 0px 40px 81px rgba(0, 0, 0, 0.05);
   background-color: white;
   display: flex;
@@ -472,6 +473,7 @@ footer .icon svg {
 }
 #ekipa .wrapper .vaditelj .photo {
   position: relative;
+  display: none;
 }
 #ekipa .wrapper .vaditelj .photo img {
   width: 100%;

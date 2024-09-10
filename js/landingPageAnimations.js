@@ -1,10 +1,26 @@
 import { CountUp } from './countUp.min.js';
 const countUpStranke = new CountUp('stranke', 63, { enableScrollSpy: true, scrollSpyOnce: true });
-const countUpYears = new CountUp('leta', 16, { enableScrollSpy: true, scrollSpyOnce: true });
+const countUpYears = new CountUp('leta', calculateYearsElapsed('2007-07-1'), { enableScrollSpy: true, scrollSpyOnce: true });
 countUpStranke.start();
 countUpYears.start();
 
 const scrollElements = document.querySelectorAll(".js-scroll");
+
+function calculateYearsElapsed(startDate) {
+    const currentDate = new Date();
+    const start = new Date(startDate);
+
+    let yearsElapsed = currentDate.getFullYear() - start.getFullYear();
+
+    if (
+        currentDate.getMonth() < start.getMonth() ||
+        (currentDate.getMonth() === start.getMonth() && currentDate.getDate() < start.getDate())
+    ) {
+        yearsElapsed--;
+    }
+
+    return yearsElapsed;
+}
 
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
