@@ -163,6 +163,9 @@ nav #mobile-menu .mobile-links {
   align-items: center;
   gap: 2rem;
   padding: 2rem 0;
+  width: 100%;
+  flex-grow: 1;
+  background-color: white;
 }
 nav #mobile-menu .mobile-links a {
   font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);

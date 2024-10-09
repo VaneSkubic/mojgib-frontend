@@ -192,6 +192,9 @@ nav {
             align-items: center;
             gap: 2rem;
             padding: 2rem 0;
+            width: 100%;
+            flex-grow: 1;
+            background-color: white;
             a {
                 font-size: $font-size-lg;
                 font-weight: 600;
