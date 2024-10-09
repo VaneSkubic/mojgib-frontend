@@ -153,6 +153,7 @@ nav #mobile-menu .upper {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e4e4ee;
+  background-color: white;
 }
 nav #mobile-menu .upper img {
   width: clamp(100px, 15vw, 180px);
@@ -164,7 +165,7 @@ nav #mobile-menu .mobile-links {
   gap: 2rem;
   padding: 2rem 0;
   width: 100%;
-  flex-grow: 1;
+  height: 100%;
   background-color: white;
 }
 nav #mobile-menu .mobile-links a {
